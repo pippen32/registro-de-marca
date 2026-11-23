@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Registro de Marca (USPTO) — Consultoría y Servicios Múltiples Omar Cruz</title>
+<meta name="description" content="Búsqueda de marca y preparación de tu solicitud de registro ante la USPTO. Búsqueda + preparación $79 · Paquete completo $149. Tarifa USPTO $350 por clase aparte, pagada por ti directamente. Servicio en español en Maryland." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Cinzel:wght@600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --verde:#0e3b2c; --verde-osc:#082a1f; --verde-suave:#e9efe7;
+    --dorado:#b8912a; --dorado-claro:#d9b64f; --crema:#faf6ec; --papel:#fffdf6;
+    --tinta:#22301f; --tinta-suave:#5a6650; --linea:#cdbf96; --rojo-sello:#8c2f1b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Source Serif 4",Georgia,serif;background:var(--crema);color:var(--tinta);line-height:1.65;font-size:17px}
+  a{color:var(--verde)}
+  .wrap{max-width:880px;margin:0 auto;padding:0 22px}
+
+  /* ── Barra superior ── */
+  .topbar{background:var(--verde-osc);color:#e9e2c8;border-bottom:3px double var(--dorado)}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:14px;padding-top:12px;padding-bottom:12px;flex-wrap:wrap}
+  .brand{font-family:"Cinzel",serif;font-weight:700;letter-spacing:.14em;font-size:.82rem;text-transform:uppercase}
+  .brand small{display:block;letter-spacing:.3em;font-size:.6rem;color:var(--dorado-claro);font-weight:600}
+  .tel{color:#fff;text-decoration:none;font-weight:700;border:1px solid var(--dorado);padding:6px 14px;border-radius:2px;font-size:.95rem}
+  .tel:hover{background:var(--dorado);color:var(--verde-osc)}
+
+  /* ── Hero: panel tipo certificado ── */
+  .hero{padding:44px 0 10px}
+  .certificado{background:var(--papel);border:2px solid var(--verde);outline:6px double var(--dorado);outline-offset:-14px;padding:52px 44px 44px;text-align:center;position:relative;box-shadow:0 14px 40px rgba(14,59,44,.14)}
+  .certificado::before,.certificado::after{content:"✦";position:absolute;color:var(--dorado);font-size:1.1rem}
+  .certificado::before{top:16px;left:20px}
+  .certificado::after{top:16px;right:20px}
+  .sello{width:104px;height:104px;margin:0 auto 18px;border:2px solid var(--dorado);border-radius:50%;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle,#fdf9ec 55%,#efe3bd);color:var(--verde);font-family:"Cinzel",serif;font-weight:700;font-size:.58rem;letter-spacing:.12em;text-align:center;line-height:1.5;padding:10px;box-shadow:inset 0 0 0 4px var(--papel),inset 0 0 0 6px var(--dorado)}
+  .certificado .sobre{font-family:"Cinzel",serif;letter-spacing:.34em;font-size:.68rem;color:var(--dorado);text-transform:uppercase;margin-bottom:12px}
+  .certificado h1{font-family:"Playfair Display",serif;font-weight:900;font-size:clamp(2.1rem,5.6vw,3.4rem);line-height:1.08;color:var(--verde-osc)}
+  .certificado h1 em{font-style:italic;color:var(--dorado)}
+  .certificado .regla{width:120px;height:0;border-top:2px solid var(--dorado);margin:20px auto;position:relative}
+  .certificado .regla::after{content:"§";position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--papel);padding:0 8px;color:var(--dorado);font-size:1rem}
+  .certificado p.lede{max-width:620px;margin:0 auto;font-size:1.08rem;color:var(--tinta)}
+  .cert-precios{display:flex;justify-content:center;gap:0;margin:28px auto 6px;flex-wrap:wrap;border:1px solid var(--linea);max-width:640px;background:#fdfaf0}
+  .cert-precios div{flex:1 1 180px;padding:14px 10px;border-right:1px solid var(--linea)}
+  .cert-precios div:last-child{border-right:none}
+  .cert-precios .n{font-family:"Playfair Display",serif;font-weight:900;font-size:1.7rem;color:var(--verde)}
+  .cert-precios .d{font-size:.8rem;color:var(--tinta-suave);letter-spacing:.04em}
+  .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+  .btn{display:inline-block;text-decoration:none;font-family:"Cinzel",serif;font-weight:700;letter-spacing:.08em;font-size:.85rem;padding:14px 28px;border-radius:2px}
+  .btn-verde{background:var(--verde);color:#f5edd2;border:1px solid var(--verde)}
+  .btn-verde:hover{background:var(--verde-osc)}
+  .btn-borde{border:1px solid var(--dorado);color:var(--verde);background:transparent}
+  .btn-borde:hover{background:#f3ead0}
+  .hero-nota{text-align:center;font-size:.88rem;color:var(--tinta-suave);margin:16px auto 0;max-width:640px;font-style:italic}
+
+  /* ── Libro mayor: secciones como asientos ── */
+  main{padding-bottom:20px}
+  section.asiento{padding:38px 0 6px}
+  .asiento-head{display:flex;align-items:baseline;gap:16px;border-bottom:2px solid var(--verde);padding-bottom:8px;margin-bottom:6px}
+  .folio{font-family:"Cinzel",serif;font-size:.72rem;letter-spacing:.2em;color:var(--dorado);white-space:nowrap}
+  .asiento-head h2{font-family:"Playfair Display",serif;font-weight:700;font-size:clamp(1.5rem,3.4vw,2rem);color:var(--verde-osc);line-height:1.2}
+  .sec-sub{color:var(--tinta-suave);font-style:italic;margin:10px 0 20px;max-width:700px}
+  .linea-ledger{border-bottom:1px solid var(--linea);padding:16px 4px}
+  .linea-ledger:last-child{border-bottom:1px solid var(--linea)}
+  .linea-ledger h3{font-family:"Playfair Display",serif;font-size:1.12rem;color:var(--verde);margin-bottom:4px}
+  .linea-ledger h3 .num{color:var(--dorado);font-style:italic;margin-right:8px}
+  .linea-ledger p{max-width:720px}
+  ul.tinta{list-style:none;max-width:740px}
+  ul.tinta li{padding:9px 4px 9px 26px;border-bottom:1px dotted var(--linea);position:relative}
+  ul.tinta li::before{content:"—";position:absolute;left:2px;color:var(--dorado)}
+  ul.tinta li strong{color:var(--verde-osc)}
+
+  /* Precios estilo acta */
+  .acta{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:8px}
+  @media(max-width:680px){.acta{grid-template-columns:1fr}}
+  .acta-card{background:var(--papel);border:1px solid var(--verde);padding:28px 26px;position:relative}
+  .acta-card.destacada{border:2px solid var(--dorado);box-shadow:0 10px 28px rgba(14,59,44,.12)}
+  .acta-card .etiqueta{font-family:"Cinzel",serif;font-size:.66rem;letter-spacing:.26em;text-transform:uppercase;color:var(--dorado);margin-bottom:8px}
+  .acta-card h3{font-family:"Playfair Display",serif;font-size:1.3rem;color:var(--verde-osc)}
+  .acta-card .precio{font-family:"Playfair Display",serif;font-weight:900;font-size:2.5rem;color:var(--verde);margin:8px 0 2px}
+  .acta-card .precio small{font-size:.85rem;font-weight:400;color:var(--tinta-suave);font-family:"Source Serif 4",serif}
+  .acta-card ul{list-style:none;margin-top:12px}
+  .acta-card ul li{padding:7px 0 7px 22px;border-bottom:1px dotted var(--linea);position:relative;font-size:.96rem}
+  .acta-card ul li::before{content:"✓";position:absolute;left:0;color:var(--dorado);font-weight:700}
+  .aparte{margin-top:20px;background:var(--verde-suave);border-left:4px solid var(--verde);padding:16px 20px;font-size:.97rem}
+
+  /* Muestra: informe */
+  .muestra{background:var(--papel);border:1px solid var(--tinta-suave);padding:0;margin-top:6px;box-shadow:6px 6px 0 rgba(14,59,44,.12)}
+  .muestra-head{background:var(--verde-osc);color:#efe8cd;padding:14px 22px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}
+  .muestra-head .t{font-family:"Cinzel",serif;letter-spacing:.16em;font-size:.78rem;text-transform:uppercase}
+  .muestra-sello{color:#ffb59d;border:1.5px solid #ffb59d;padding:3px 10px;font-family:"Cinzel",serif;font-size:.66rem;letter-spacing:.2em;transform:rotate(-2deg)}
+  .muestra-body{padding:22px}
+  .muestra-body p{font-size:.95rem;margin-bottom:14px}
+  table.registro{width:100%;border-collapse:collapse;font-size:.9rem}
+  table.registro th{font-family:"Cinzel",serif;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;text-align:left;color:var(--verde);border-bottom:2px solid var(--verde);padding:8px 8px}
+  table.registro td{border-bottom:1px solid #e3dcc2;padding:9px 8px;vertical-align:top}
+  .riesgo{font-weight:700;font-size:.8rem;letter-spacing:.05em}
+  .riesgo.alto{color:var(--rojo-sello)} .riesgo.medio{color:#9a6b00} .riesgo.bajo{color:var(--verde)}
+  .muestra-veredicto{margin-top:16px;border-top:2px solid var(--dorado);padding-top:14px;font-size:.95rem}
+  .muestra-veredicto strong{color:var(--verde-osc)}
+
+  /* Pasos del libro */
+  ol.pasos{list-style:none;counter-reset:paso;max-width:760px}
+  ol.pasos li{counter-increment:paso;padding:16px 4px 16px 74px;border-bottom:1px solid var(--linea);position:relative}
+  ol.pasos li::before{content:counter(paso,upper-roman);position:absolute;left:6px;top:14px;font-family:"Playfair Display",serif;font-weight:900;font-size:1.35rem;color:var(--dorado);width:52px;text-align:center}
+  ol.pasos h3{font-family:"Playfair Display",serif;color:var(--verde-osc);font-size:1.1rem;margin-bottom:3px}
+
+  /* FAQ */
+  details.faq{border-bottom:1px solid var(--linea);padding:6px 4px}
+  details.faq summary{cursor:pointer;font-family:"Playfair Display",serif;font-weight:700;color:var(--verde-osc);font-size:1.05rem;padding:10px 0;list-style:none}
+  details.faq summary::-webkit-details-marker{display:none}
+  details.faq summary::before{content:"P. ";color:var(--dorado);font-style:italic}
+  details.faq p{padding:0 0 14px 24px;max-width:720px}
+
+  /* Nota honesta */
+  .honesta{background:var(--verde-osc);color:#e8e2c8;padding:30px 30px 26px;margin-top:34px;border-top:4px solid var(--dorado)}
+  .honesta h2{font-family:"Playfair Display",serif;color:#fff;font-size:1.4rem;margin-bottom:10px}
+  .honesta p{margin-bottom:10px;font-size:.97rem;max-width:740px}
+  .honesta strong{color:var(--dorado-claro)}
+
+  /* Formulario */
+  .form-libro{background:var(--papel);border:2px solid var(--verde);padding:34px 32px;margin-top:22px;box-shadow:0 12px 32px rgba(14,59,44,.12)}
+  .form-libro h2{font-family:"Playfair Display",serif;color:var(--verde-osc);font-size:1.5rem;margin-bottom:4px}
+  .form-libro .sub{font-style:italic;color:var(--tinta-suave);margin-bottom:22px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:640px){.grid2{grid-template-columns:1fr}}
+  .field{margin-bottom:18px}
+  .field label{display:block;font-family:"Cinzel",serif;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--verde);margin-bottom:6px;font-weight:700}
+  .field .req{color:var(--rojo-sello)}
+  .field input,.field select,.field textarea{width:100%;font-family:"Source Serif 4",serif;font-size:1rem;padding:11px 12px;border:1px solid var(--linea);border-bottom:2px solid var(--verde);background:#fffef9;color:var(--tinta)}
+  .field textarea{min-height:110px;resize:vertical}
+  .field .hint{font-size:.82rem;color:var(--tinta-suave);font-style:italic;margin-top:4px}
+  .submit{width:100%;background:var(--verde);color:#f5edd2;border:none;font-family:"Cinzel",serif;font-weight:700;letter-spacing:.1em;font-size:.95rem;padding:16px;cursor:pointer;border-radius:2px}
+  .submit:hover{background:var(--verde-osc)}
+  .alt-contact{text-align:center;margin-top:16px;font-size:.95rem}
+
+  footer{background:var(--verde-osc);color:#cfc7a4;margin-top:46px;padding:30px 0 36px;border-top:3px double var(--dorado);font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  footer a{color:#efe8cd}
+  footer .fbrand{font-family:"Cinzel",serif;letter-spacing:.14em;text-transform:uppercase;font-size:.76rem;color:#fff}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand">Consultoría y Servicios Múltiples<small>Omar Cruz · Maryland</small></div>
+    <a class="tel" href="tel:+12406590154" aria-label="Llamar a la Consultoría Omar Cruz al 240-659-0154">☎ 240-659-0154</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <!-- ═══ HERO — PANEL TIPO CERTIFICADO ═══ -->
+  <div class="hero">
+    <div class="certificado">
+      <div class="sello">Marca<br/>Registrada<br/>® · USPTO</div>
+      <p class="sobre">Registro federal de marcas · Estados Unidos</p>
+      <h1>Tu nombre y tu logo,<br/><em>protegidos por ley</em></h1>
+      <div class="regla"></div>
+      <p class="lede">Hacemos la <strong>búsqueda oficial de tu marca</strong>, te decimos con honestidad si se puede registrar, y preparamos tu solicitud ante la <strong>USPTO</strong> (Oficina de Patentes y Marcas de EE.UU.) — en español, paso a paso, sin que tengas que pelear con el sistema en inglés.</p>
+      <div class="cert-precios">
+        <div><div class="n">$79</div><div class="d">Búsqueda + preparación</div></div>
+        <div><div class="n">$149</div><div class="d">Paquete completo</div></div>
+        <div><div class="n">$350</div><div class="d">Tarifa USPTO por clase *</div></div>
+      </div>
+      <p style="font-size:.82rem;color:var(--tinta-suave)">* La tarifa de la USPTO la pagas tú, directamente al gobierno. No pasa por nuestras manos.</p>
+      <div class="cta-row">
+        <a class="btn btn-verde" href="#solicitud">Solicitar mi búsqueda</a>
+        <a class="btn btn-borde" href="https://wa.me/12406590154" target="_blank" rel="noopener">WhatsApp 240-659-0154</a>
+      </div>
+    </div>
+    <p class="hero-nota">Sin búsqueda previa, registrar es tirar el dinero: si tu marca choca con una ya registrada, la USPTO rechaza la solicitud y <strong>no devuelve la tarifa</strong>. Por eso empezamos siempre por la búsqueda.</p>
+  </div>
+
+  <main>
+  <!-- ═══ 01 · QUÉ ES ═══ -->
+  <section class="asiento" aria-labelledby="que-es">
+    <div class="asiento-head"><span class="folio">Folio 01</span><h2 id="que-es">Qué es una marca registrada — y qué protege</h2></div>
+    <p class="sec-sub">Lo que queda asentado en el registro federal cuando la USPTO aprueba tu solicitud.</p>
+    <div class="linea-ledger">
+      <h3><span class="num">a.</span>El nombre de tu negocio</h3>
+      <p>La palabra o frase con la que tus clientes te conocen. Registrada, nadie más en tu giro puede usar un nombre parecido que confunda al público en todo Estados Unidos.</p>
+    </div>
+    <div class="linea-ledger">
+      <h3><span class="num">b.</span>Tu logo y tu eslogan</h3>
+      <p>El diseño, la combinación de letras e imagen y la frase que te identifica también se pueden registrar. Es lo que te da derecho a usar el símbolo <strong>®</strong>.</p>
+    </div>
+    <div class="linea-ledger">
+      <h3><span class="num">c.</span>Un activo de tu negocio</h3>
+      <p>La marca registrada vale dinero: se puede vender, licenciar y heredar con el negocio. Y es tu defensa si alguien copia tu nombre en redes, en un rótulo o en una tienda en línea.</p>
+    </div>
+    <div class="linea-ledger">
+      <h3><span class="num">d.</span>Lo que NO hace el registro estatal</h3>
+      <p>Registrar tu LLC o tu nombre comercial en Maryland <strong>no</strong> te da la marca. Son registros distintos: el estatal organiza tu negocio; el federal de la USPTO protege tu nombre en todo el país.</p>
+    </div>
+  </section>
+
+  <!-- ═══ 02 · LA BÚSQUEDA ═══ -->
+  <section class="asiento" aria-labelledby="busqueda">
+    <div class="asiento-head"><span class="folio">Folio 02</span><h2 id="busqueda">La búsqueda de marca, explicada sin rodeos</h2></div>
+    <p class="sec-sub">Antes de llenar un solo formulario, revisamos si tu marca está libre — y qué tan riesgoso sería registrarla.</p>
+    <ul class="tinta">
+      <li><strong>Búsqueda en la base federal (USPTO/TESS):</strong> marcas idénticas y parecidas — en sonido, apariencia y significado — ya registradas o en trámite, en tus clases de productos o servicios.</li>
+      <li><strong>Clases internacionales (Clasificación de Niza):</strong> cada marca se registra por clase (ej.: ropa = clase 25, restaurante = clase 43). Revisamos tus clases y las clases vecinas donde suele haber conflicto.</li>
+      <li><strong>Riesgo de confusión:</strong> la USPTO rechaza marcas «confusamente similares» a una anterior en giros relacionados. Evaluamos ese riesgo y te lo explicamos en español claro.</li>
+      <li><strong>Búsqueda estatal y de uso común:</strong> registros estatales y uso real en el mercado (negocios que usan el nombre sin registrarlo), porque también pueden afectar tu solicitud.</li>
+      <li><strong>Informe escrito:</strong> recibes un informe con lo encontrado, el nivel de riesgo por hallazgo y nuestra recomendación: proceder, ajustar el nombre/logo, o no gastar en la solicitud.</li>
+    </ul>
+  </section>
+
+  <!-- ═══ 03 · QUÉ INCLUYE ═══ -->
+  <section class="asiento" aria-labelledby="incluye">
+    <div class="asiento-head"><span class="folio">Folio 03</span><h2 id="incluye">Qué incluye el servicio</h2></div>
+    <p class="sec-sub">Dos niveles. Empiezas por la búsqueda; si la marca está libre, el paquete completo lleva tu solicitud hasta la USPTO.</p>
+    <div class="acta">
+      <div class="acta-card">
+        <p class="etiqueta">Nivel I</p>
+        <h3>Búsqueda + Preparación</h3>
+        <p class="precio">$79</p>
+        <ul>
+          <li>Búsqueda federal, estatal y de uso común</li>
+          <li>Análisis de clases y riesgo de confusión</li>
+          <li>Informe escrito con recomendación honesta</li>
+          <li>Preparación de tus datos para la solicitud: titular, descripción de productos/servicios y muestra de uso (specimen)</li>
+          <li>Explicación en español de todo el resultado</li>
+        </ul>
+      </div>
+      <div class="acta-card destacada">
+        <p class="etiqueta">Nivel II · El completo</p>
+        <h3>Paquete Completo</h3>
+        <p class="precio">$149</p>
+        <ul>
+          <li>Todo lo del Nivel I</li>
+          <li>Llenado y presentación de la solicitud ante la USPTO (sistema TEAS)</li>
+          <li>Coordinación del pago de la tarifa oficial</li>
+          <li>Seguimiento del trámite y aviso de cada notificación</li>
+          <li>Apoyo para responder requerimientos de información de rutina del examinador</li>
+          <li>Copia completa de tu expediente para tus archivos</li>
+        </ul>
+      </div>
+    </div>
+    <div class="aparte">
+      <p><strong>Tarifa del gobierno, aparte:</strong> la USPTO cobra <strong>$350 por clase</strong> de productos o servicios. Esa tarifa la pagas <strong>tú directamente a la USPTO</strong> y <strong>no es reembolsable</strong> aunque la solicitud sea rechazada — por eso la búsqueda va primero. Nuestro cobro ($79 / $149) es solo por la búsqueda, la preparación y la coordinación.</p>
+    </div>
+  </section>
+
+  <!-- ═══ 04 · MUESTRA ═══ -->
+  <section class="asiento" aria-labelledby="muestra">
+    <div class="asiento-head"><span class="folio">Folio 04</span><h2 id="muestra">Muestra: así se ve un informe de búsqueda</h2></div>
+    <p class="sec-sub">Esto es, en formato real, el tipo de informe que recibes. Los datos son de ejemplo.</p>
+    <div class="muestra" role="img" aria-label="Ejemplo ilustrativo de un informe de búsqueda de marca">
+      <div class="muestra-head">
+        <span class="t">Informe de búsqueda de marca</span>
+        <span class="muestra-sello">Muestra — Ejemplo</span>
+      </div>
+      <div class="muestra-body">
+        <p><strong>Marca consultada:</strong> «SABOR BORICUA» (nombre + logo) · <strong>Giro:</strong> restaurante y venta de comida puertorriqueña · <strong>Clases revisadas:</strong> 43 (restaurantes), 30 (alimentos), 35 (venta al detalle) · <strong>Fecha:</strong> ejemplo ilustrativo.</p>
+        <table class="registro">
+          <thead><tr><th>Hallazgo</th><th>Clase</th><th>Estado</th><th>Riesgo</th></tr></thead>
+          <tbody>
+            <tr><td>«SABOR BORICUA» — registro federal existente (cadena de restaurantes, Florida)</td><td>43</td><td>Registrada y vigente</td><td class="riesgo alto">ALTO</td></tr>
+            <tr><td>«EL SABOR BORICUA» — solicitud en trámite (food truck, Nueva York)</td><td>43</td><td>En trámite</td><td class="riesgo alto">ALTO</td></tr>
+            <tr><td>«SABORES DE BORIKÉN» — marca de salsas empacadas</td><td>30</td><td>Registrada</td><td class="riesgo medio">MEDIO</td></tr>
+            <tr><td>«Sabor Boricua Catering LLC» — nombre comercial estatal (Maryland), sin registro federal</td><td>—</td><td>Uso común local</td><td class="riesgo medio">MEDIO</td></tr>
+          </tbody>
+        </table>
+        <p class="muestra-veredicto"><strong>Veredicto del ejemplo:</strong> con dos marcas anteriores en la misma clase 43, presentar «SABOR BORICUA» para restaurante tiene alta probabilidad de rechazo por confusión. Recomendación: ajustar el nombre (añadir un elemento distintivo propio) y repetir la búsqueda sobre el nombre nuevo antes de pagar la tarifa de la USPTO.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 05 · PASOS ═══ -->
+  <section class="asiento" aria-labelledby="pasos">
+    <div class="asiento-head"><span class="folio">Folio 05</span><h2 id="pasos">El proceso, paso a paso</h2></div>
+    <p class="sec-sub">Del primer mensaje a tu solicitud presentada.</p>
+    <ol class="pasos">
+      <li><h3>Cuéntanos tu marca</h3><p>Llenas el formulario de abajo o nos escribes por WhatsApp: nombre, logo si lo tienes, y qué vendes o qué servicio das.</p></li>
+      <li><h3>Corremos la búsqueda</h3><p>Revisamos la base federal, los registros estatales y el uso común en tus clases. Toma de 2 a 4 días laborables.</p></li>
+      <li><h3>Recibes tu informe</h3><p>Te entregamos el informe escrito y te lo explicamos en español: qué se encontró, qué riesgo hay y qué recomendamos.</p></li>
+      <li><h3>Tú decides</h3><p>Si la marca está libre (o ajustada), pasas al paquete completo. Si el riesgo es alto, te lo decimos de frente antes de que gastes la tarifa del gobierno.</p></li>
+      <li><h3>Presentamos la solicitud</h3><p>Preparamos y presentamos la solicitud en el sistema TEAS de la USPTO; tú pagas la tarifa oficial de $350 por clase directamente.</p></li>
+      <li><h3>Seguimiento</h3><p>La USPTO tarda varios meses en examinar. Te avisamos de cada notificación y te acompañamos en los requerimientos de rutina hasta la resolución.</p></li>
+    </ol>
+  </section>
+
+  <!-- ═══ 06 · FAQ ═══ -->
+  <section class="asiento" aria-labelledby="faq">
+    <div class="asiento-head"><span class="folio">Folio 06</span><h2 id="faq">Preguntas frecuentes</h2></div>
+    <p class="sec-sub">Las de siempre, contestadas de frente.</p>
+    <details class="faq"><summary>¿Cuánto tarda el registro completo?</summary><p>Si no hay objeciones, el trámite ante la USPTO suele tomar de 12 a 18 meses desde la presentación. La búsqueda y la preparación con nosotros toman días; el resto es el tiempo de examen del gobierno, que nadie puede acelerar.</p></details>
+    <details class="faq"><summary>¿Puedo registrar mi marca si todavía no abro el negocio?</summary><p>Sí. Existe la solicitud por «intención de uso»: reservas la marca mientras preparas la apertura, y luego presentas la prueba de uso. Te explicamos en la búsqueda cuál vía te conviene.</p></details>
+    <details class="faq"><summary>¿La tarifa de $350 se paga por cada clase?</summary><p>Sí: $350 por cada clase de productos o servicios. La mayoría de los negocios pequeños necesita una o dos clases. En la búsqueda te decimos exactamente cuántas clases cubre tu caso antes de pagar nada.</p></details>
+    <details class="faq"><summary>¿Qué pasa si la USPTO rechaza mi solicitud?</summary><p>La tarifa del gobierno no se devuelve. Algunos rechazos son por detalles corregibles (una «office action» de rutina) y se responden; otros son por conflicto con una marca anterior — ese es justamente el riesgo que la búsqueda busca detectar antes de que pagues.</p></details>
+    <details class="faq"><summary>Vivo fuera de Estados Unidos. ¿Puedo registrar mi marca allá?</summary><p>La USPTO exige que los solicitantes con domicilio fuera de EE.UU. estén representados por un abogado licenciado en Estados Unidos. Nuestro servicio para esos casos es la búsqueda, la preparación del expediente y la coordinación con el abogado que lleve la presentación; te lo decimos desde el primer mensaje, sin vueltas.</p></details>
+    <details class="faq"><summary>¿Ustedes son abogados?</summary><p>No. Somos un servicio de búsqueda, preparación de documentos y coordinación. No damos asesoría legal ni opiniones legales. Si tu caso necesita un abogado de marcas, te lo decimos y te orientamos sobre cómo buscar uno.</p></details>
+    <details class="faq"><summary>¿Puedo usar el símbolo ® desde que presento la solicitud?</summary><p>No. Mientras tu solicitud está en trámite puedes usar ™. El símbolo ® solo es legal cuando la USPTO emite tu registro.</p></details>
+  </section>
+
+  <!-- ═══ NOTA HONESTA ═══ -->
+  <div class="honesta" aria-labelledby="honesta">
+    <h2 id="honesta">La nota honesta, en letra clara</h2>
+    <p><strong>Consultoría y Servicios Múltiples Omar Cruz no es un bufete de abogados.</strong> Omar Cruz no es abogado, no ofrece asesoría legal y este servicio no está afiliado a la USPTO ni a ninguna agencia del gobierno.</p>
+    <p>El servicio consiste en <strong>búsqueda de marca, preparación de la solicitud y coordinación del trámite</strong>. La decisión de registrar o rechazar una marca es exclusivamente de la USPTO: <strong>nadie puede garantizarte que tu marca será registrada</strong>, y desconfía de quien te lo prometa.</p>
+    <p>Los solicitantes con <strong>domicilio fuera de Estados Unidos</strong> deben, por regla de la USPTO, estar representados por un abogado licenciado en EE.UU. En esos casos nuestro trabajo es la búsqueda, la preparación y la coordinación con ese abogado.</p>
+  </div>
+
+  <!-- ═══ 07 · FORMULARIO ═══ -->
+  <section class="asiento" id="solicitud" aria-labelledby="form-title">
+    <div class="asiento-head"><span class="folio">Folio 07</span><h2 id="form-title">Abre tu expediente</h2></div>
+    <div class="form-libro">
+      <h2>Formulario de solicitud</h2>
+      <p class="sub">Cuéntanos qué marca quieres proteger. Te contactamos para coordinar la búsqueda — sin compromiso por escribir.</p>
+      <form action="https://formsubmit.co/leydelswing@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Nueva solicitud — Registro de Marca (USPTO)" />
+        <input type="hidden" name="_cc" value="swingbravo@gmail.com" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <div class="grid2">
+          <div class="field">
+            <label for="f-nombre">Nombre completo <span class="req" aria-hidden="true">*</span></label>
+            <input id="f-nombre" name="Nombre completo" type="text" autocomplete="name" required placeholder="Tal como aparece en tu identificación" />
+          </div>
+          <div class="field">
+            <label for="f-telefono">Teléfono <span class="req" aria-hidden="true">*</span></label>
+            <input id="f-telefono" name="Teléfono" type="tel" autocomplete="tel" required placeholder="(240) 000-0000" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-email">Correo electrónico <span class="req" aria-hidden="true">*</span></label>
+          <input id="f-email" name="Correo electrónico" type="email" autocomplete="email" required placeholder="tunombre@correo.com" />
+        </div>
+        <div class="grid2">
+          <div class="field">
+            <label for="f-negocio">Negocio <span class="req" aria-hidden="true">*</span></label>
+            <input id="f-negocio" name="Negocio" type="text" required placeholder="Nombre de tu negocio o proyecto" />
+          </div>
+          <div class="field">
+            <label for="f-paquete">Servicio de interés <span class="req" aria-hidden="true">*</span></label>
+            <select id="f-paquete" name="Servicio de interés" required>
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option value="Búsqueda + Preparación — $79">Búsqueda + Preparación — $79</option>
+              <option value="Paquete Completo — $149">Paquete Completo — $149</option>
+              <option value="Todavía no lo sé / quiero orientación">Todavía no lo sé / quiero orientación</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-mensaje">Mensaje — la marca que quieres registrar</label>
+          <textarea id="f-mensaje" name="Mensaje" placeholder="Escribe el nombre o logo que quieres registrar, qué productos vendes o qué servicio das, y si ya estás usando la marca."></textarea>
+          <p class="hint">Entre más claro nos digas tu giro, más precisa sale la búsqueda de clases.</p>
+        </div>
+        <button class="submit" type="submit">Enviar mi solicitud</button>
+      </form>
+      <p class="alt-contact">¿Prefieres hablar primero? WhatsApp o llamada al <a href="tel:+12406590154"><strong>240-659-0154</strong></a> · Consultoría Omar Cruz, Maryland.</p>
+    </div>
+  </section>
+  </main>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <p class="fbrand">Consultoría y Servicios Múltiples Omar Cruz</p>
+      <p>Registro de Marca (USPTO) · Búsqueda, preparación y coordinación de documentos.<br/>Este sitio no está afiliado a la USPTO. No somos un bufete de abogados.</p>
+    </div>
+    <div>
+      <p><a href="tel:+12406590154">Teléfono / WhatsApp: 240-659-0154</a></p>
+      <p>Maryland, EE.UU. · Servicio en español</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
